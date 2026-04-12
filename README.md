@@ -1,6 +1,18 @@
 # Langflow
 
-Visual LLM workflow builder. Design and prototype AI flows with a drag-and-drop interface.
+[![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com)
+[![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/langflow/actions)
+[![License](https://img.shields.io/github/license/stackblaze-templates/langflow)](LICENSE)
+
+A visual framework for building multi-agent and RAG applications. Design AI workflows with a drag-and-drop interface.
+
+> **Credits**: Built on [Langflow](https://langflow.org) by [Langflow AI](https://github.com/langflow-ai). All trademarks belong to their respective owners.
+
+## Deploy on StackBlaze
+
+[![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
+
+This template includes a `stackblaze.yaml` for one-click deployment on [StackBlaze](https://stackblaze.com).
 
 ## Local Development
 
@@ -8,12 +20,16 @@ Visual LLM workflow builder. Design and prototype AI flows with a drag-and-drop 
 docker compose up
 ```
 
-Visit `http://localhost:7860` to start building flows.
+See the project files for configuration details.
 
-## Custom Components
+---
 
-Langflow supports custom Python components. See [Langflow docs](https://docs.langflow.org/) for creating custom nodes.
+### Maintained by [StackBlaze](https://stackblaze.com)
 
-## Deploy on StackBlaze
+This template is actively maintained by StackBlaze. We perform **weekly automated checks** to ensure:
 
-This template includes a `stackblaze.yaml` that provisions Langflow with a PostgreSQL database.
+- **Up-to-date dependencies** — frameworks, libraries, and base images are kept current
+- **Security scanning** — continuous monitoring for known vulnerabilities and CVEs
+- **Best practices** — configurations follow current recommendations from upstream projects
+
+Found an issue? [Open a ticket](https://github.com/stackblaze-templates/langflow/issues).
