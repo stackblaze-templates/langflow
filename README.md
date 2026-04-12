@@ -1,19 +1,12 @@
-# Langflow
+<p align="center"><img src="logo.png" alt="langflow" width="120"></p>
 
-<p align="center"><img src="logo.png" alt="Langflow" width="120"></p>
-
-
-[![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com)
-[![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/langflow/actions)
-[![License](https://img.shields.io/github/license/stackblaze-templates/langflow)](LICENSE)
+# Langflow [![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com) [![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/langflow/actions) [![License](https://img.shields.io/github/license/stackblaze-templates/langflow)](LICENSE) [![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
 
 A visual framework for building multi-agent and RAG applications. Design AI workflows with a drag-and-drop interface.
 
 > **Credits**: Built on [Langflow](https://langflow.org) by [Langflow AI](https://github.com/langflow-ai). All trademarks belong to their respective owners.
 
 ## Deploy on StackBlaze
-
-[![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
 
 This template includes a `stackblaze.yaml` for one-click deployment on [StackBlaze](https://stackblaze.com).
 
