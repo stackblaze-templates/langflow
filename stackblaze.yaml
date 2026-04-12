@@ -1,0 +1,18 @@
+databases:
+  - name: langflow-db
+    databaseName: langflow
+    user: langflow
+
+services:
+  - type: web
+    name: langflow
+    runtime: docker
+    plan: starter
+    autoDeploy: false
+    envVars:
+      - key: LANGFLOW_DATABASE_URL
+        fromDatabase:
+          name: langflow-db
+          property: connectionString
+      - key: LANGFLOW_SECRET_KEY
+        generateValue: true
