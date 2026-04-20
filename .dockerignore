@@ -1,10 +1,14 @@
 .env
 .env.local
 .env.*.local
-*.log
-.DS_Store
+.git
+.gitignore
+node_modules
 *.pem
 *.key
 *.crt
 *.p12
 *.pfx
+*.log
+.DS_Store
+README.md

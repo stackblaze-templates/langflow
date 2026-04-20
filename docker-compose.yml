@@ -1,21 +1,28 @@
 services:
   langflow:
-    image: langflowai/langflow:latest
+    image: langflowai/langflow:1.9.0
     ports:
       - "7860:7860"
     environment:
-      - LANGFLOW_DATABASE_URL=postgresql://langflow:langflow@db:5432/langflow
+      - LANGFLOW_DATABASE_URL=postgresql://langflow:${POSTGRES_PASSWORD}@db:5432/langflow
+      - LANGFLOW_SECRET_KEY=${LANGFLOW_SECRET_KEY}
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   db:
     image: postgres:16-alpine
     environment:
       POSTGRES_DB: langflow
       POSTGRES_USER: langflow
-      POSTGRES_PASSWORD: langflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U langflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   db_data:
