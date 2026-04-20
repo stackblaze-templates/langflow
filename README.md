@@ -91,6 +91,34 @@ flowchart LR
 
 ---
 
+## Security
+
+### Required environment variables
+
+Before running in production, you **must** set the following environment variables to non-default values:
+
+| Variable | Description | How to generate |
+|---|---|---|
+| `LANGFLOW_SECRET_KEY` | Secret key for session signing and encryption | `python -c "import secrets; print(secrets.token_hex(32))"` |
+| `POSTGRES_PASSWORD` | PostgreSQL database password (used by docker-compose to build the DB URL) | Use a strong random password manager value |
+
+### Local development
+
+Copy `.env.example` to `.env` and fill in real values:
+
+```bash
+cp .env.example .env
+# Edit .env and set strong values for POSTGRES_PASSWORD and LANGFLOW_SECRET_KEY
+```
+
+> ⚠️ **Never commit `.env` to source control.** The `.gitignore` excludes it, but be careful with secrets in environment files.
+
+### Production defaults warning
+
+The `docker-compose.yml` file uses `${POSTGRES_PASSWORD}` and `${LANGFLOW_SECRET_KEY}` placeholders — **there are no shipped default passwords**. The application will fail to start without these values set, which is intentional to prevent accidental deployment with weak credentials.
+
+---
+
 ### Maintained by [StackBlaze](https://stackblaze.com)
 
 This template is actively maintained by StackBlaze. We perform **weekly automated checks** to ensure:
